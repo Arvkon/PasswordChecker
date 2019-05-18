@@ -1,0 +1,8 @@
+<html>
+<body>
+<p>Sorry, that's not the correct password 🤡</p>
+<form method="post" action="/retry">
+<button type="submit">Wait, we think we know it!</button>
+</form>
+</body>
+</html>

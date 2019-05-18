@@ -11,14 +11,18 @@ public func routes(_ router: Router) throws {
     }
 
     router.post { request in
-        return try request.content.decode(FormInput.self).map(to: String.self) { input in
+        return try request.content.decode(FormInput.self).flatMap(to: View.self) { input in
 
             if input.password.lowercased() == "strawberries" {
-                return "Well done! That is the correct password 🎉"
+                return try request.view().render("huzzah")
             } else {
-                return "Sorry, that's not the correct password 🤡"
+                return try request.view().render("incorrect")
             }
         }
+    }
+
+    router.post("retry") { request in
+        return request.redirect(to: "/")
     }
 
 }
