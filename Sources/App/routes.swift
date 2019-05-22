@@ -13,7 +13,7 @@ public func routes(_ router: Router) throws {
     router.post { request in
         return try request.content.decode(FormInput.self).flatMap(to: View.self) { input in
 
-            if input.password.lowercased() == "strawberries" {
+            if input.password.lowercased() == "huwelijksreis" {
                 return try request.view().render("huzzah")
             } else {
                 return try request.view().render("incorrect")
