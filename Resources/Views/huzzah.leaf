@@ -1,6 +1,18 @@
+<!doctype html>
 <html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Mirjard.css">
+</head>
 <body>
-<p><b>Well done!</b></p>
-<p>You'll hear from us shortly to receive your prize 🏆</p>
+  <div id="center_right">
+      <div id="content_right">
+      <h3><b>Well done! 🎉</b></h3>
+      <p>You'll hear from us shortly to receive your prize.<br><br>In the meantime,<br>glorious spirit horse salutes you!</p>
+
+        <div id="horse">
+        </div>
+  </div>
+</div>
+
 </body>
 </html>

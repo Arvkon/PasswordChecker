@@ -14,7 +14,12 @@ public func configure(
     try routes(router)
     services.register(router, as: Router.self)
 
-    // Configure the rest of your application here
+    // Enable rendering view templates using Leaf
     try services.register(LeafProvider())
     config.prefer(LeafRenderer.self, for: ViewRenderer.self)
+
+    // Enable serving files (like CSS) from the Public folder
+    var middlewares = MiddlewareConfig()
+    middlewares.use(FileMiddleware.self)
+    services.register(middlewares)
 }

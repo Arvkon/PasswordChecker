@@ -1,10 +1,21 @@
+<!doctype html>
 <html>
+<head>
+<link rel="stylesheet" type="text/css" href="Mirjard.css">
+</head>
 <body>
-<p><b>Hello lovelies!</b> 💘</p>
-<p>Did you find the password? 🕵️‍♀️</p>
-<form method="post" action="/">
-<input type="text" name="password">
-<button type="submit">Check</button>
-</form>
+<div id="center_start">
+  <div id="hello">
+    <h1><strong>Hi</strong></h1>
+  </div>
+  <h2><b>lovelies!</b></h2>
+  <p>Did you find the password? 🕵️‍♀️</p>
+  <div id="content_start">
+    <form method="post" action="/">
+      <input type="text" name="password" />
+      <button type="submit">Check</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>

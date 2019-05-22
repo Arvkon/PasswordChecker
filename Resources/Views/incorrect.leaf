@@ -1,8 +1,17 @@
+<!doctype html>
 <html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Mirjard.css">
+</head>
 <body>
-<p>Sorry, that's not the correct password 🤡</p>
-<form method="post" action="/retry">
-<button type="submit">Wait, we think we know it!</button>
-</form>
+    <div id="center_wrong">
+      <div id="content_wrong">
+        <h3><b>Sorry!</b></h3>
+        <p>That's not the magic word 🤡</p>
+        <form method="post" action="/retry">
+        <button type="submit">Hmm...</button>
+        </form>
+      </div>
+  </div>
 </body>
 </html>

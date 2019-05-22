@@ -1,0 +1,161 @@
+/* CSS Document */
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffdaa8+0,ff237b+100 */
+  background: #ffdaa8; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffdaa8 0%, #ff237b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffdaa8 0%, #ff237b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffdaa8 0%, #ff237b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdaa8', endColorstr='#ff237b', GradientType=0 ); /* IE6-9 */
+}
+h1 {
+}
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 34px;
+  margin-top: -150px;
+  color: white;
+  letter-spacing: 6px;
+  font-style: oblique;
+  opacity: 0.9;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  margin-bottom:-5px;
+  color: white;
+  letter-spacing: 0px;
+  font-style: oblique;
+  opacity: 0.9;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+  opacity: 0.9;
+}
+#center_start {
+  position: absolute;
+  width: auto;
+  top: 25%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -150px;
+}
+
+#center_wrong {
+  position: absolute;
+  width: auto;
+  top: 45%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -150px;
+}
+
+#center_right {
+  position: absolute;
+  width: auto;
+  top: 25%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -170px;
+}
+#content_start {
+  height: 400px;
+  width: 300px;
+}
+
+#content_wrong {
+  height: 200px;
+  width: 300px;
+}
+
+#content_right {
+  height: 400px;
+  width: 340px;
+}
+#hello {
+  transform: skew(10deg, -10deg) scaleY(0.9);
+  font-size: 100px;
+  background: url(giphy.gif) no-repeat center center;
+  background-size: cover;
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+  -webkit-background-clip: text;
+  animation: colorRotate 5s linear infinite;
+}
+ @keyframes colorRotate {
+ 100% {
+ -webkit-filter: hue-rotate(360deg);
+}
+}
+input[type=text] {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  margin-right: 5px;
+}
+input, select, textarea {
+  color: #fff;
+}
+button[type=submit] {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  margin: 4px 2px;
+  cursor: pointer;
+  animation: rotation
+}
+button:hover[type=submit] {
+  animation-name: rotatecw;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ @keyframes rotatecw {
+ from {
+transform: rotate(0deg);
+}
+ to {
+transform: rotate(360deg);
+}
+}
+
+/* disable hover rotation on mobile device? */
+@media (hover: none) {
+button:hover[type=submit] {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+}
+
+#horse {
+  background-image: url(ugly_horse.gif);
+  width: 75%;
+  height: 95%;
+  background-size: cover;
+  margin-top: 30px;
+  margin-left:30px;
+}
