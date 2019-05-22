@@ -1,5 +1,7 @@
 import Leaf
 import Vapor
+import VaporExt
+import Mailgun
 
 /// Called before your application initializes.
 ///
@@ -22,4 +24,9 @@ public func configure(
     var middlewares = MiddlewareConfig()
     middlewares.use(FileMiddleware.self)
     services.register(middlewares)
+
+    Environment.dotenv()
+    let mailgun = Mailgun(apiKey: Environment.get(EnvKeys.mailgunApiKey, ""),
+                          domain: Environment.get(EnvKeys.mailgunDomain, ""))
+    services.register(mailgun, as: Mailgun.self)
 }

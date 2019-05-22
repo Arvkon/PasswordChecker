@@ -1,5 +1,6 @@
 import Routing
 import Vapor
+import Mailgun
 
 /// Register your application's routes here.
 ///
@@ -13,10 +14,24 @@ public func routes(_ router: Router) throws {
     router.post { request in
         return try request.content.decode(FormInput.self).flatMap(to: View.self) { input in
 
-            if input.password.lowercased() == "huwelijksreis" {
-                return try request.view().render("huzzah")
+            let password = Environment.get(EnvKeys.password, "")
+
+            let emailText: String
+            let leafPath: String
+
+            if input.password.lowercased() == password {
+                emailText = "Correct password entered! (\(input.password))"
+                leafPath = "huzzah"
             } else {
-                return try request.view().render("incorrect")
+                emailText = "Incorrect password entered: \(input.password)"
+                leafPath = "incorrect"
+            }
+
+            let mailgun = try request.make(Mailgun.self)
+            let message = Email().message(emailText)
+
+            return try mailgun.send(message, on: request).flatMap { response -> EventLoopFuture<View> in
+                return try request.view().render(leafPath)
             }
         }
     }

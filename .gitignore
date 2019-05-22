@@ -20,6 +20,9 @@ xcuserdata/
 ## Xcode project
 *xcodeproj
 
+## Environment variables
+.env*
+
 ## Other
 *.moved-aside
 *.xccheckout
