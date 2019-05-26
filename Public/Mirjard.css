@@ -81,7 +81,7 @@ p {
 
 #content_right {
   height: 400px;
-  width: 340px;
+  width: 300px;
 }
 #hello {
   transform: skew(10deg, -10deg) scaleY(0.9);
